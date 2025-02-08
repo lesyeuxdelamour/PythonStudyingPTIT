@@ -1,9 +1,6 @@
 n = input()
 
-cnt = 0
-for i in n:
-	if i == '4' or i == '7':
-		cnt += 1
+cnt = n.count('4') + n.count('7')
 
 if cnt == 4 or cnt == 7:
 	print("YES")
