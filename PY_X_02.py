@@ -1,13 +1,12 @@
 n = int(input())
 
-a = list(map(int, input().split()))
-
+a = map(int, input().split())
 res = -int(1e9)
+
 for i in a:
     res = max(res, i)
 
-l = r = 0
-sum = 0
+l = r = curSum = 0
 
 for i in range(n):
     sum += a[i]

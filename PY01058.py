@@ -6,20 +6,11 @@ def isPrime(n):
             return False
     return n > 1
 
-def check(n):
-    if not isPrime(len(n)):
-        return False
-    cnt = 0
-    for i in n:
-        if isPrime(int(i)):
-            cnt += 1
-    return cnt > len(n) - cnt
-
 tc = int(input())
 
 for _ in range(tc):
     n = input()
-    if(check(n)):
+    if(isPrime(int(n[-4:]))):
         print("YES")
     else:
         print("NO")
