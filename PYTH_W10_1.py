@@ -3,8 +3,6 @@ def convert(n, b):
     while n > 0:
         res += str(n % b)
         n //= b
-    if len(res) < 2:
-        return False
     return res == res[::-1]
 
 def isBiPalindrome(n, a, b):
@@ -20,3 +18,5 @@ def _sinusoid_():
 
 if __name__ == "__main__":
     _sinusoid_()
+
+#Todo: fix WA

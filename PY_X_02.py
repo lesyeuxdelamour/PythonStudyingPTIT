@@ -1,20 +1,17 @@
-n = int(input())
+def _sinusoid_():
+    n = int(input())
+    a = list(map(int, input().split()))
+    res = max(a)
+    l, r, curSum = 0, 0, 0
+    for i in range(n):
+        curSum += a[i]
+        if curSum < 0:
+            curSum = 0
+            l = i + 1
+        elif curSum > res:
+            res = curSum
+            r = i
+    print(l + 1, r + 1, res)
 
-a = map(int, input().split())
-res = -int(1e9)
-
-for i in a:
-    res = max(res, i)
-
-l = r = curSum = 0
-
-for i in range(n):
-    sum += a[i]
-    if sum < 0:
-        sum = 0
-        l = i + 1
-    elif sum > res:
-        res = sum
-        r = i
-
-print(l + 1, r + 1, res)
+if __name__ == "__main__":
+    _sinusoid_()
