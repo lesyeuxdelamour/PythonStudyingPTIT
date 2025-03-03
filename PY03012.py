@@ -5,11 +5,10 @@ class Student:
         self.submit = submit
 
     def __lt__(self, other):
-        if self.correct != other.correct:
-            return self.correct > other.correct
-        if self.submit != other.submit:
-            return self.submit < other.submit
-        return self.name < other.name
+        return (other.correct, self.submit, self.name) < (self.correct, other.submit, other.name)
+
+    def __str__(self):
+        return f"{self.name} {self.correct} {self.submit}"
 
 def _sinusoid_():
     students = []
@@ -18,7 +17,7 @@ def _sinusoid_():
         correct, submit = map(int, input().split())
         students.append(Student(name, correct, submit))
     for student in sorted(students):
-        print(student.name, student.correct, student.submit)
+        print(student)
 
 if __name__ == "__main__":
     _sinusoid_()

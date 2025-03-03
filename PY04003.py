@@ -19,8 +19,8 @@ class Fraction:
         return f"{self.num}/{self.den}"
 
 def _sinusoid_():
-    inp = input().split()
-    frac = Fraction(int(inp[0]), int(inp[1]))
+    inp = list(map(int, input().split()))
+    frac = Fraction(inp[0], inp[1])
     print(frac)
 
 if __name__ == "__main__":
