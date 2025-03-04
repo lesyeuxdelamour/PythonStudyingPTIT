@@ -25,8 +25,7 @@ class Fraction:
 
 def _sinusoid_():
     inp = list(map(int, input().split()))
-    frac1, frac2 = Fraction(inp[0], inp[1]), Fraction(inp[2], inp[3])
-    print(frac1 + frac2)
+    print(Fraction(inp[0], inp[1]) + Fraction(inp[2], inp[3]))
 
 if __name__ == "__main__":
     _sinusoid_()

@@ -1,6 +1,6 @@
 class Bill:
     def __init__(self, order, name, before, after):
-        self.ID = f"KH{str(order).zfill(2)}"
+        self.ID = f"KH{order:02}"
         self.name = name
         self.water = after - before
         self.fee = self.calc(self.water)
@@ -31,8 +31,7 @@ def _sinusoid_():
         before = int(input())
         after = int(input())
         bills.append(Bill(i + 1, name, before, after))
-    for bill in sorted(bills):
-        print(bill)
+    print(*sorted(bills), sep = '\n')
 
 if __name__ == "__main__":
     _sinusoid_()

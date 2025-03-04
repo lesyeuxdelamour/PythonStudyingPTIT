@@ -16,8 +16,7 @@ def _sinusoid_():
         name = input()
         correct, submit = map(int, input().split())
         students.append(Student(name, correct, submit))
-    for student in sorted(students):
-        print(student)
+    print(*sorted(student), sep = '\n')
 
 if __name__ == "__main__":
     _sinusoid_()

@@ -30,8 +30,7 @@ def _sinusoid_():
         inp += list(map(float, input().split()))
     for i in range(0, 6 * tc, 6):
         x1, y1, x2, y2, x3, y3 = inp[i:i + 6]
-        triangle = Triangle(Point(x1, y1), Point(x2, y2), Point(x3, y3))
-        print(triangle.area())
+        print(Triangle(Point(x1, y1), Point(x2, y2), Point(x3, y3)).area())
 
 if __name__ == "__main__":
     _sinusoid_()

@@ -13,13 +13,15 @@ class Rectangle:
     def color(self):
         return self.colour.capitalize()
 
+    def __str__(self):
+        return f"{rec.perimeter()} {rec.area()} {rec.color()}"
+
 def _sinusoid_():
     inp = input().split()
     if int(inp[0]) <= 0 or int(inp[1]) <= 0:
         print("INVALID")
         return
-    rec = Rectangle(int(inp[0]), int(inp[1]), inp[2])
-    print(f"{rec.perimeter()} {rec.area()} {rec.color()}")
+    print(Rectangle(int(inp[0]), int(inp[1]), inp[2]))
 
 _sinusoid_()
 
