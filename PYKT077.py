@@ -1,11 +1,11 @@
 from datetime import datetime
 
 class Session:
-    def __init__(self, order, subjectID, name, date, sessionID):
+    def __init__(self, order, subjectID, name, day, hour, sessionID):
         self.ID = f"T{order:03}"
         self.subjectID = subjectID
         self.name = name
-        self.date = date
+        self.date = day + ' ' + hour
         self.sessionID = sessionID
 
     def __lt__(self, other):
@@ -23,7 +23,7 @@ def _sinusoid_():
         subjects[ID] = name
     for i in range(m):
         subjectID, day, hour, sessionID = input().split()
-        sessions.append(Session(i + 1, subjectID, subjects[subjectID], day + ' ' + hour, sessionID))
+        sessions.append(Session(i + 1, subjectID, subjects[subjectID], day, hour, sessionID))
     print(*sorted(sessions), sep = '\n')
 
 if __name__ == "__main__":
