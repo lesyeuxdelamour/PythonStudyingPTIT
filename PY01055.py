@@ -10,7 +10,7 @@ tc = int(input())
 
 for _ in range(tc):
     n = input()
-    if(check(n)):
+    if check(n):
         print("YES")
     else:
         print("NO")
